@@ -1,14 +1,15 @@
 package alipay.com.app;
 
-import android.app.Application;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+
+import alipay.com.base.BaseApplication;
 
 /**
  * Created by zsq51 on 2018/4/25.
  */
 
-public class App extends Application {
+public class App extends BaseApplication {
 
     private boolean debug = true;
 
@@ -16,6 +17,11 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         initARouter();
+    }
+
+    @Override
+    protected String getBaseUrl() {
+        return null;
     }
 
     private void initARouter() {
