@@ -1,23 +1,19 @@
 # ARouterBaseProject
 
 #### 项目介绍
-基本组件化的Base框架
+基本组件化的Base框架，在原有的BaseProject中引入了ARouter作为路由，更改了gradle配置。可以在gradle.properties中配置业务组建是否单独编译。
 
 #### 软件架构
-软件架构说明
+MVP+Retrofit+RxAndroid+Glide
 
 
 #### 安装教程
 
-1. xxxx
-2. xxxx
-3. xxxx
 
 #### 使用说明
 
-1. xxxx
-2. xxxx
-3. xxxx
+1. 需要单独编译某个插件可以在更目录下的gradle.properties中配置
+2. 新增model时可按照以后的model来配置名称，并添加到gradle.properties以及app的gradle中
 
 #### 参与贡献
 
