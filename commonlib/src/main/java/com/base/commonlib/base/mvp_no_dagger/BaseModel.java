@@ -1,4 +1,4 @@
-package com.base.base;
+package com.base.commonlib.base.mvp_no_dagger;
 
 
 /**

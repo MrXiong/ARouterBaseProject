@@ -1,14 +1,13 @@
-package com.base.base;
+package com.base.commonlib.base.mvp_no_dagger;
 
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 
-
-import java.util.LinkedList;
-
 import com.base.commonlib.di.module.AppModule;
 import com.base.commonlib.di.module.ClientModule;
+
+import java.util.LinkedList;
 
 
 /**

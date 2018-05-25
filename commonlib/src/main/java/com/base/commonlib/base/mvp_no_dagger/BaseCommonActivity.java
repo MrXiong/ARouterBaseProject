@@ -1,4 +1,4 @@
-package com.base.base;
+package com.base.commonlib.base.mvp_no_dagger;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -9,11 +9,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-
-
 import java.util.LinkedList;
 
-import com.base.app.App;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
@@ -30,13 +27,13 @@ public abstract class BaseCommonActivity extends AppCompatActivity {
     public static final String IS_NOT_ADD_ACTIVITY_LIST = "is_add_activity_list";//是否加入到activity的list，管理
     private String TAG = getClass().getSimpleName();
     private BroadcastReceiver mBroadcastReceiver;
-    private App application;
+    private BaseApplication application;
     private Unbinder bind;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        application = (App) getApplication();
+        application = (BaseApplication) getApplication();
         boolean isNotAdd = getIntent().getBooleanExtra(IS_NOT_ADD_ACTIVITY_LIST, false);
         synchronized (BaseCommonActivity.class) {
             if (!isNotAdd)
@@ -54,7 +51,7 @@ public abstract class BaseCommonActivity extends AppCompatActivity {
     protected abstract void initCData();
 
 
-    public App getMApplication() {
+    public BaseApplication getMApplication() {
         return application;
     }
 

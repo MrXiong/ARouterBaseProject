@@ -1,4 +1,4 @@
-package com.base.base;
+package com.base.commonlib.base.mvp_no_dagger;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,8 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
-import com.base.app.App;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
@@ -21,7 +19,7 @@ import butterknife.Unbinder;
  */
 
 public abstract class BaseFragment<p extends BasePresenter> extends Fragment {
-    private App application;
+    private BaseApplication application;
     private View rootView;
     private Activity mainActivity;
     private Unbinder bind;
@@ -41,7 +39,7 @@ public abstract class BaseFragment<p extends BasePresenter> extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        application = (App) (getActivity().getApplication());
+        application = (BaseApplication) (getActivity().getApplication());
         if (null == rootView) {//如果缓存中有rootView则直接使用
             rootView = inflater.inflate(getContentViewId(), container, false);
             bind = ButterKnife.bind(this, rootView);

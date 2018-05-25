@@ -2,11 +2,11 @@ package com.base.app;
 
 
 import com.alibaba.android.arouter.launcher.ARouter;
-
-import com.base.base.BaseApplication;
+import com.base.commonlib.base.mvp_no_dagger.BaseApplication;
 
 /**
- * Created by zsq51 on 2018/4/25.
+ * Created by
+ * zsq51 on 2018/4/25.
  */
 
 public class App extends BaseApplication {
