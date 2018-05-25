@@ -1,4 +1,4 @@
-package alipay.com.common.recycler;
+package alipay.com.commonlib.recycler;
 
 import android.animation.Animator;
 import android.content.Context;
@@ -10,12 +10,10 @@ import android.view.ViewGroup;
 import android.view.animation.Interpolator;
 import android.widget.LinearLayout;
 
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 
 import alipay.com.commonlib.animation.AnimationType;
 import alipay.com.commonlib.utils.AnimationUtil;

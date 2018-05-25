@@ -1,4 +1,4 @@
-package alipay.com.common.recycler;
+package alipay.com.commonlib.recycler;
 
 import android.content.Context;
 import android.graphics.Paint;

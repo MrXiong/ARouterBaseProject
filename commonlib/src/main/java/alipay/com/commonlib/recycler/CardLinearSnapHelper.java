@@ -1,4 +1,4 @@
-package alipay.com.common.recycler;
+package alipay.com.commonlib.recycler;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearSnapHelper;
