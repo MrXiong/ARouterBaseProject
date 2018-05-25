@@ -12,8 +12,17 @@ MVP+Retrofit+RxAndroid+Glide
 
 #### 使用说明
 
-1. 需要单独编译某个插件可以在更目录下的gradle.properties中配置
-2. 新增model时可按照以后的model来配置名称，并添加到gradle.properties以及app的gradle中
+1. 如需要单独编译某个插件可以在根目录下的gradle.properties中配置
+2. 如需新增module时可按照已经配置好的4个的module来配置名称，并添加到gradle.properties以及app的gradle中
+3. 如需要修改module名称，需要在3个地方修改：
+       
+      A. gradle.properties,定义变量名称
+       
+      B. 主项目（app）的gradle文件中，修改依赖库的选择编译条件
+       
+      C. module本身的gradle中，修改选择编译applicationId的条件
+4. 不要向项目推送带有业务逻辑的代码，项目本身只是一个通用的框架
+5. 推送代码时如遇涉及到到使用功能的更新或修改要做好注释并及时更新 README
 
 #### 参与贡献
 
@@ -21,13 +30,3 @@ MVP+Retrofit+RxAndroid+Glide
 2. 新建 Feat_xxx 分支
 3. 提交代码
 4. 新建 Pull Request
-
-
-#### 码云特技
-
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5. 码云官方提供的使用手册 [http://git.mydoc.io/](http://git.mydoc.io/)
-6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)

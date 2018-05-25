@@ -68,10 +68,10 @@ ext {
             "umengcommon"            : 'com.umeng.sdk:common:latest.integration',//友盟统计sdk
             "umenganalytics"         : 'com.umeng.sdk:analytics:latest.integration',//友盟统计sdk
             "multidex"               : 'com.android.support:multidex:1.0.1',//解决兼容性问题
-            "arouter-api"            : 'com.alibaba:arouter-api:1.3.1',//Arouter api
-            "arouter-compiler"       : 'com.alibaba:arouter-compiler:1.1.4',//
+            "arouter-api"            : 'com.alibaba:arouter-api:1.3.1',//ARouter api
+            "arouter-compiler"       : 'com.alibaba:arouter-compiler:1.1.4',//ARouter
             "constraint-layout"      : 'com.android.support.constraint:constraint-layout:1.1.0',//约束性布局
-            "test:runner"            : 'com.android.support.test:runner:1.0.2',//
-            "espresso-core"          : 'com.android.support.test.espresso:espresso-core:3.0.2',//
+            "test:runner"            : 'com.android.support.test:runner:1.0.2',//测试依赖，新建项目时会默认添加，一般不建议添加
+            "espresso-core"          : 'com.android.support.test.espresso:espresso-core:3.0.2',//测试依赖，新建项目时会默认添加，一般不建议添加
     ]
 }
