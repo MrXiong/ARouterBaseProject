@@ -22,7 +22,6 @@ android {
                 arguments = [moduleName: project.getName()]
             }
         }
-
     }
 
     buildTypes {
