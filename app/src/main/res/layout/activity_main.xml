@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.base.dtaroutor.MainActivity">
 
     <TextView
-        android:id="@+id/hello_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/chat_tv"
+        style="@style/text_style"
+        android:layout_marginTop="100px"
+        android:text="聊天" />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/contract_tv"
+        style="@style/text_style"
+        android:layout_marginTop="350px"
+        android:text="通讯录" />
+
+    <TextView
+        android:id="@+id/find_tv"
+        style="@style/text_style"
+        android:layout_marginTop="600px"
+        android:text="发现" />
+
+    <TextView
+        android:id="@+id/mine_tv"
+        style="@style/text_style"
+        android:layout_marginTop="850px"
+        android:text="我的" />
+
+</com.zhy.autolayout.AutoFrameLayout>

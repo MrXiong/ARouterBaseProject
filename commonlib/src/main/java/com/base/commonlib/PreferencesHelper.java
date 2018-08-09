@@ -33,7 +33,6 @@ public class PreferencesHelper {
         SharedPreferences.Editor editor = mPref.edit();
         editor.putBoolean(ISLOGIN, islogin);
         editor.apply();
-
     }
 
     public boolean isFirstTime() {

@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.base.mine.MainActivity">
-
+    tools:context="com.base.FindActivity">
     <TextView
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="这是我的界面" />
-
-</android.support.constraint.ConstraintLayout>
+        android:text="这是发现界面"/>
+</com.zhy.autolayout.AutoFrameLayout>

@@ -29,6 +29,11 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile rootProject.ext.dependencies["junit"]
+
     implementation rootProject.ext.dependencies["appcompat-v7"]
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
 

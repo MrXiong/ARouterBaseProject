@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
@@ -12,9 +11,12 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.base.commonlib.service.HomeExportService;
 
 @Route(path = "/test/main")
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView hello_tv;
+    private TextView chat_tv;
+    private TextView contract_tv;
+    private TextView find_tv;
+    private TextView mine_tv;
 
     @Autowired(name = "/home/HomeService")
     public HomeExportService baseService;
@@ -24,17 +26,44 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ARouter.getInstance().inject(this);
-        hello_tv = findViewById(R.id.hello_tv);
-        hello_tv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // 2. 跳转并携带参数
-                ARouter.getInstance().build("/chat/test")
+        initView();
+    }
+
+    private void initView() {
+        chat_tv = findViewById(R.id.chat_tv);
+        contract_tv = findViewById(R.id.contract_tv);
+        find_tv = findViewById(R.id.find_tv);
+        mine_tv = findViewById(R.id.mine_tv);
+
+        chat_tv.setOnClickListener(this);
+        contract_tv.setOnClickListener(this);
+        find_tv.setOnClickListener(this);
+        mine_tv.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.chat_tv:
+                ARouter.getInstance().build("/chat/main")
                         .withLong("key1", 666L)
                         .withString("key3", "888")
                         .navigation();
-                Toast.makeText(MainActivity.this,baseService.sayHello("张绍强"),Toast.LENGTH_LONG).show();
-            }
-        });
+                break;
+            case R.id.contract_tv:
+                ARouter.getInstance().build("/home/main")
+                        .navigation();
+                break;
+            case R.id.find_tv:
+                ARouter.getInstance().build("/find/main")
+                        .navigation();
+                break;
+            case R.id.mine_tv:
+                ARouter.getInstance().build("/mine/main")
+                        .navigation();
+                break;
+            default:
+                break;
+        }
     }
 }
