@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ARouterBaseProject.iml" filepath="$PROJECT_DIR$/.idea/ARouterBaseProject.iml" />
-      <module fileurl="file://D:\AndroidStudioProject\ARouterBaseProject\Aroutor.iml" filepath="D:\AndroidStudioProject\ARouterBaseProject\Aroutor.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/chat/chat.iml" filepath="$PROJECT_DIR$/chat/chat.iml" />
       <module fileurl="file://$PROJECT_DIR$/commonlib/commonlib.iml" filepath="$PROJECT_DIR$/commonlib/commonlib.iml" />
