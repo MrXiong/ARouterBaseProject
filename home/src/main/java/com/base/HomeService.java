@@ -11,6 +11,7 @@ import com.base.commonlib.service.HomeExportService;
 
 @Route(path = "/home/HomeService",name = "测试服务")
 public class HomeService implements HomeExportService {
+    private String name;
     @Override
     public String sayHello(String s) {
         return "HomeService say hello to" + s;
@@ -18,6 +19,10 @@ public class HomeService implements HomeExportService {
 
     @Override
     public void init(Context context) {
+       initData();
+    }
 
+    private void initData() {
+        name="yc";
     }
 }

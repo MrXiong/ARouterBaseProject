@@ -29,4 +29,10 @@
         android:layout_marginTop="850px"
         android:text="我的" />
 
+    <TextView
+        android:id="@+id/say_hello_tv"
+        style="@style/text_style"
+        android:layout_marginTop="1100px"
+        android:text="调用服务" />
+
 </com.zhy.autolayout.AutoFrameLayout>

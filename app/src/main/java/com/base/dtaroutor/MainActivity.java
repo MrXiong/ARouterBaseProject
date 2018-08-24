@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView contract_tv;
     private TextView find_tv;
     private TextView mine_tv;
+    private TextView say_hello_tv;
 
     @Autowired(name = "/home/HomeService")
     public HomeExportService baseService;
@@ -34,11 +36,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         contract_tv = findViewById(R.id.contract_tv);
         find_tv = findViewById(R.id.find_tv);
         mine_tv = findViewById(R.id.mine_tv);
+        say_hello_tv = findViewById(R.id.say_hello_tv);
 
         chat_tv.setOnClickListener(this);
         contract_tv.setOnClickListener(this);
         find_tv.setOnClickListener(this);
         mine_tv.setOnClickListener(this);
+        say_hello_tv.setOnClickListener(this);
     }
 
     @Override
@@ -61,6 +65,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.mine_tv:
                 ARouter.getInstance().build("/mine/main")
                         .navigation();
+                break;
+            case R.id.say_hello_tv:
+                Toast.makeText(this, baseService.sayHello("易诚互动"), Toast.LENGTH_SHORT).show();
                 break;
             default:
                 break;

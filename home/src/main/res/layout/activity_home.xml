@@ -7,6 +7,6 @@
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="这是通讯录界面"/>
+        android:text="这是主页面"/>
 
 </LinearLayout>
